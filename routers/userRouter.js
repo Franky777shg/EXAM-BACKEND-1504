@@ -30,7 +30,7 @@ router.post('/register', registerValidation, userController.register)
 router.post('/login', userController.login)
 router.patch('/deactive', verifyToken, userController.deactivate)
 router.patch('/activate', verifyToken, userController.activate)
-router.delete('/close', verifyToken, userController.closed)
+router.patch('/close', verifyToken, userController.closed)
 
 // export router
 module.exports = router
